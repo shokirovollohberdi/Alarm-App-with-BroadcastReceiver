@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.shokirov.alarmapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addAlarmFragment"
+            app:destination="@id/addAlarmFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAlarmFragment"
+        android:name="uz.shokirov.alarmapp.AddAlarmFragment"
+        android:label="fragment_add_alarm"
+        tools:layout="@layout/fragment_add_alarm" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="uz.shokirov.alarmapp.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+</navigation>
